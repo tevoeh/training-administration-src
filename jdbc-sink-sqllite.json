@@ -1,0 +1,14 @@
+{
+  "name": "jdbc-sink-conn",
+  "config": {
+    "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
+    "connection.url": "jdbc_connect_string",
+    "tasks.max": "1",
+    "topics": "jdbc_sink",
+    "auto.create": "true",
+    "value.converter": "io.confluent.connect.avro.AvroConverter",
+    "value.converter.schema.registry.url": "https://sr_host:sr_port",
+    "value.converter.basic.auth.credentials.source": "USER_INFO",
+    "value.converter.basic.auth.user.info": "avnadmin:sr_pw"
+  }
+}

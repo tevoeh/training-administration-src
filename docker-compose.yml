@@ -248,6 +248,17 @@ services:
     command: /bin/bash
     tty: true
 
+  sqldata:
+    image: mcr.microsoft.com/mssql/server:2017-latest
+    container_name: sqldata
+    environment:
+      - SA_PASSWORD=Pass@word
+      - ACCEPT_EULA=Y
+    networks:
+      - confluent
+    ports:
+      - "5434:1433"
+
 volumes:
   data-zk-log-1:
   data-zk-data-1:

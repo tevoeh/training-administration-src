@@ -1,0 +1,21 @@
+{
+"name": "mssql-source-connector",
+"config": {
+        "connector.class": "io.confluent.connect.jdbc.JdbcSourceConnector",
+        "mode": "timestamp",
+        "timestamp.column.name": "updateTimeStamp",
+        "query": "select * from Inventory",
+        "tasks.max": "1",
+        "table.types": "TABLE",
+        "key.converter.schemas.enable": "false",
+        "topic.prefix": "sqlserver-",
+        "value.converter.schemas.enable": "false",
+        "connection.url": "jdbc:sqlserver://sqldata:1433;databaseName=TestDB;",
+        "connection.user": "SA",
+        "connection.password": "Pass@word",
+        "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+        "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+        "poll.interval.ms": "5000",
+        "table.poll.interval.ms": "120000"
+    }
+}

@@ -1,0 +1,6 @@
+{"version":1,
+"partitions":[
+{"topic":"test","partition":0,"replicas":[101,102,103]},
+{"topic":"test","partition":1,"replicas":[101,102,103]},
+{"topic":"test","partition":2,"replicas":[102,103]}]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "JDBC-Source-Connector",
+  "config": {
+    "connector.class": "io.confluent.connect.jdbc.JdbcSourceConnector",
+    "connection.url": "jdbc:sqlite:/data/my.db",
+    "table.whitelist": "years",
+    "mode": "incrementing",
+    "incrementing.column.name": "id",
+    "table.types": "TABLE",
+    "topic.prefix": "shakespeare_"
+  }
+}
